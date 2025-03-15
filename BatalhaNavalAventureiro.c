@@ -25,17 +25,14 @@ int main() {
     int tabuleiro[TAMANHO_TABULEIRO][TAMANHO_TABULEIRO];
     inicializarTabuleiro(tabuleiro);
 
-    // Posiciona um navio horizontalmente na linha 2, coluna 3
+    // Posiciona navios horizontalmente, verticalmente e diagonalmente
     for (int i = 0; i < 3; i++) {
-        tabuleiro[2][3 + i] = 3;
+        tabuleiro[1][1 + i] = 3; // Horizontal
+        tabuleiro[3 + i][2] = 3; // Vertical
+        tabuleiro[5 + i][5 + i] = 3; // Diagonal
     }
 
-    // Posiciona um navio verticalmente na linha 5, coluna 7
-    for (int i = 0; i < 3; i++) {
-        tabuleiro[5 + i][7] = 3;
-    }
-
-    printf("Nível Novato - Tabuleiro com Navios Posicionados:\n");
+    printf("Nível Aventureiro - Tabuleiro com Navios Posicionados:\n");
     exibirTabuleiro(tabuleiro);
 
     return 0;
